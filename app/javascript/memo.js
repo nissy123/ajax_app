@@ -3,16 +3,16 @@ const buildHTML = (XHR) => {
   const html = `
     <div class="post">
       <div class="post-date">
-        投稿日時:${item.created_at}
+        投稿日時：${item.created_at}
       </div>
       <div class="post-content">
         ${item.content}
       </div>
     </div>`;
+  return html;
 };
 
-
-function post() {
+function post (){
   const submit = document.getElementById("submit");
   submit.addEventListener("click", (e) => {
     e.preventDefault();
@@ -33,7 +33,6 @@ function post() {
       formText.value = "";
     };
   });
-  
 };
 
 window.addEventListener('load', post);
